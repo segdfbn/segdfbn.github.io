@@ -5,84 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My Personal Blog</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJ6H7I2U6t3b5h9y5h5V5p5Qd2r55r5da5c5yt5m5a5u5l5V" crossorigin="anonymous">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
         header {
             background-color: #333;
             color: white;
-            padding: 20px;
-            text-align: center;
+            padding: 50px 0;
         }
         header h1 {
-            margin: 0;
-        }
-        nav {
-            background-color: #444;
-            text-align: center;
-            padding: 10px;
-        }
-        nav a {
-            color: white;
-            padding: 10px;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        nav a:hover {
-            background-color: #555;
+            font-size: 3em;
         }
         .content {
-            padding: 20px;
+            margin-top: 30px;
         }
         .post {
             background-color: white;
-            margin: 20px 0;
-            padding: 20px;
+            margin-bottom: 30px;
+            padding: 30px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .post h2 {
-            color: #333;
         }
         footer {
             background-color: #333;
             color: white;
+            padding: 20px 0;
             text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Welcome to My Personal Blog</h1>
-        <p>Sharing thoughts, ideas, and experiences</p>
+    <header class="text-center">
+        <div class="container">
+            <h1>Welcome to My Personal Blog</h1>
+            <p>Sharing thoughts, ideas, and experiences</p>
+        </div>
     </header>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Blog</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <div class="content">
-        <div class="post">
-            <h2>My First Blog Post</h2>
-            <p><strong>Posted on:</strong> March 8, 2025</p>
-            <p>This is a short introduction to my personal blog. I'll be writing about various topics, ranging from technology to lifestyle. Stay tuned for more!</p>
-        </div>
+    <div id="home" class="container content">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="post">
+                    <h2>My First Blog Post</h2>
+                    <p><strong>Posted on:</strong> March 8, 2025</p>
+                    <p>This is a short introduction to my personal blog. I'll be writing about various topics, ranging from technology to lifestyle. Stay tuned for more!</p>
+                </div>
 
-        <div class="post">
-            <h2>Exploring GitHub Pages</h2>
-            <p><strong>Posted on:</strong> March 8, 2025</p>
-            <p>In this post, I'll guide you through setting up your own blog using GitHub Pages. It's a great way to get started with web development and blogging for free!</p>
+                <div class="post">
+                    <h2>Exploring GitHub Pages</h2>
+                    <p><strong>Posted on:</strong> March 8, 2025</p>
+                    <p>In this post, I'll guide you through setting up your own blog using GitHub Pages. It's a great way to get started with web development and blogging for free!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="about" class="container content">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="post">
+                    <h2>About Me</h2>
+                    <p><strong>Hi, I'm [Your Name]!</strong></p>
+                    <p>I’m passionate about technology, programming, and design. In this blog, I share my experiences, projects, and thoughts on various topics, from coding tutorials to lifestyle tips. My goal is to inspire others to learn and grow through the content I create. I hope you find my posts helpful and engaging. Feel free to reach out if you have any questions or want to collaborate on something interesting!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="container content">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="post">
+                    <h2>Contact Me</h2>
+                    <p>If you'd like to get in touch, feel free to reach out through my LinkedIn profile:</p>
+                    <p><a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="btn btn-primary">Visit My LinkedIn</a></p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -90,5 +110,8 @@
         <p>&copy; 2025 My Personal Blog. All rights reserved.</p>
     </footer>
 
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gyb7fGzKkW3NfEXx6l0oUR6fBlZ6gx5aBLe3v1cS5p1YvXOT58z" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-GLhlTQ8iRABkWfXk9f3I1d3uQpQdhj5ukF6b7L4d4BxW8wBwQynR/p7qC1upKv1Yp" crossorigin="anonymous"></script>
 </body>
 </html>
