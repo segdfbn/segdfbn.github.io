@@ -235,11 +235,15 @@
                 <div class="resume-section-content">
                     <h2 class="mb-5">Formulaire de contact</h2>
                     <hr class="divider my-4" />
-                    <div class="row justify-content-center">
+                    <div class="row justify-left-left">
                     <div class="col-lg-6">
-                        <form action="https://formspree.io/f/xxxxxxx" method="POST">
+                        <form action="php/send.php" method="POST">
                         <div class="form-group mb-3">
                             <label for="name">Nom</label>
+                            <input type="text" class="form-control" name="name" required />
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="Subject">Subject</label>
                             <input type="text" class="form-control" name="name" required />
                         </div>
                         <div class="form-group mb-3">
